@@ -27,9 +27,16 @@ class List extends Component {
   render() {
     return (
       <div>
-        <ul className="list-group">
-          {this.state.events.map((event, index) => <ListEntry key={index} event={event} />)}
-        </ul>
+        <div className="row">
+          <h1 className="col-md" style={{ textAlign: 'center' }}>Latest Events</h1>
+        </div>
+        <div className="row">
+          <div className="col-md-4" />
+          <ul className="col-md list-group">
+            {this.state.events.map((event, index) => <ListEntry key={index} event={event} />)}
+          </ul>
+          <div className="col-md-4" />
+        </div>
       </div>
     );
   }
