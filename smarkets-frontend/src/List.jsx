@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class List extends Component {
   render() {
     return (
-      <h1>Hi!</h1>
+      <div>Hello.</div>
     );
   }
 }
 
-export default App;
+export default List;
