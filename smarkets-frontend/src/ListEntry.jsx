@@ -1,7 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const ListEntry = (props) => (
-
+const ListEntry = ({ event }) => (
+  <li>
+    {event.name}
+  </li>
 );
+
+ListEntry.propTypes = {
+  event: PropTypes.object, // eslint-disable-line
+};
 
 export default ListEntry;

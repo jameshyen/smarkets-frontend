@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import ListEntry from './ListEntry';
+
 const noCors = 'https://cors-anywhere.herokuapp.com/';
 const popularEvents = 'https://fe-api.smarkets.com/v0/events/popular/';
 
@@ -26,7 +28,7 @@ class List extends Component {
     return (
       <div>
         <ul>
-          {this.state.events.map((event, index) => <li key={index}>{event.name}</li>)}
+          {this.state.events.map((event, index) => <ListEntry key={index} event={event} />)}
         </ul>
       </div>
     );
