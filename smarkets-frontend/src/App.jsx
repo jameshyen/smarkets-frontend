@@ -6,7 +6,7 @@ import List from './List';
 
 const App = () => (
   <Router>
-    <div>
+    <div className="container-fluid">
       <Route exact path="/" component={List} />
       {/* <Route path="/event" component={Event} /> */}
     </div>

@@ -27,7 +27,7 @@ class List extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="list-group">
           {this.state.events.map((event, index) => <ListEntry key={index} event={event} />)}
         </ul>
       </div>
