@@ -1,0 +1,14 @@
+{
+  "name": "smarkets-frontend-screen",
+  "version": "1.0.0",
+  "description": "Tech screen for job opportunity.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Yen",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^1.5.2"
+  }
+}
