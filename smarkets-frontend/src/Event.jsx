@@ -17,7 +17,6 @@ const waitMessage = (
 class Event extends Component {
   constructor(props) {
     super(props);
-    console.log(props.location.state.event);
     this.state = {
       event: {},
       loading: true,
@@ -33,7 +32,6 @@ class Event extends Component {
     fetch(`${noCors}${eventInfo}${event.id}`)
       .then(response => response.json())
       .then((json) => {
-        console.log(json);
         this.setState({
           event: json.event,
           loading: false,
