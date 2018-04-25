@@ -31,7 +31,7 @@ class List extends Component {
       <div>
         <div className="row">
           <h1 className="col-md" style={{ textAlign: 'center' }}>Latest Events</h1>
-        </div>
+        </div><br />
         {this.state.loading ?
           <div className="row">
             <h3 className="col-md" style={{ textAlign: 'center' }}>Fetching...</h3>
