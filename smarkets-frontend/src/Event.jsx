@@ -9,7 +9,7 @@ const eventInfo = 'https://fe-api.smarkets.com/v0/events/id/';
 const waitMessage = (
   <div className="row">
     <div className="col-md-3" />
-    <h4 className="col-md">Please wait...</h4>
+    <h4 className="col-md">Fetching detailed info...</h4>
     <div className="col-md-3" />
   </div>
 );

@@ -1,7 +1,7 @@
 {
   "name": "smarkets-frontend-screen",
   "version": "1.0.0",
-  "description": "Example frontend using Smarkets' API",
+  "description": "Example frontend using Smarkets' API.",
   "main": "smarkets-frontend/src/index.js",
   "author": "James Yen",
   "license": "ISC",
