@@ -9,7 +9,7 @@ const ListEntry = ({ event }) => (
 );
 
 ListEntry.propTypes = {
-  event: PropTypes.object,
+  event: PropTypes.object.isRequired,
 };
 
 export default ListEntry;
