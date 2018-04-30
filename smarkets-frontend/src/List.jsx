@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import ListEntry from './ListEntry';
+import { noCors } from './Helpers';
 
-const noCors = 'https://cors-anywhere.herokuapp.com/';
 const popularEvents = 'https://fe-api.smarkets.com/v0/events/popular/';
 
 class List extends Component {
