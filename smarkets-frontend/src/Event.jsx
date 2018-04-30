@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-import { noCors, wrapByThreeColumns } from './Helpers';
+import { noCors, wrapByNColumns } from './Helpers';
 
 const eventInfo = 'https://fe-api.smarkets.com/v0/events/id/';
 
@@ -35,14 +35,14 @@ class Event extends Component {
   render() {
     return (
       <div>
-        {wrapByThreeColumns(<h1 className="col-md">{this.state.event.name}</h1>)}
-        {wrapByThreeColumns(<h3 className="col-md">{`Category: ${this.state.event.parent_name}`}</h3>)}
+        {wrapByNColumns(<h1 className="col-md">{this.state.event.name}</h1>, 3)}
+        {wrapByNColumns(<h3 className="col-md">{`Category: ${this.state.event.parent_name}`}</h3>, 3)}
         {this.state.loading ?
-          wrapByThreeColumns(<h4 className="col-md">Fetching detailed info...</h4>) :
+          wrapByNColumns(<h4 className="col-md">Fetching detailed info...</h4>, 3) :
           <div>
-            wrapByThreeColumns(<h3 className="col-md">{`Event type: ${this.state.event.event_type.charAt(0).toUpperCase() + this.state.event.event_type.slice(1)}`}</h3>)
-            wrapByThreeColumns(<h3 className="col-md">{`Start date: ${moment(this.state.event.start_datetime).fromNow()}`}</h3>)
-            wrapByThreeColumns(<Link className="col-md" to="/">Go back...</Link>)
+            {wrapByNColumns(<h3 className="col-md">{`Event type: ${this.state.event.event_type.charAt(0).toUpperCase() + this.state.event.event_type.slice(1)}`}</h3>, 3)}
+            {wrapByNColumns(<h3 className="col-md">{`Start date: ${moment(this.state.event.start_datetime).fromNow()}`}</h3>, 3)}
+            {wrapByNColumns(<Link className="col-md" to="/">Go back...</Link>, 3)}
           </div>
         }
       </div>
@@ -51,7 +51,7 @@ class Event extends Component {
 }
 
 Event.propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object.isRequired,
 };
 
 export default Event;
