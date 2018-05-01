@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import ListEntry from './ListEntry';
+import { noCors, wrapByNColumns } from './Helpers';
 
-const noCors = 'https://cors-anywhere.herokuapp.com/';
 const popularEvents = 'https://fe-api.smarkets.com/v0/events/popular/';
 
 class List extends Component {
@@ -36,13 +36,12 @@ class List extends Component {
           <div className="row">
             <h3 className="col-md" style={{ textAlign: 'center' }}>Fetching...</h3>
           </div> :
-          <div className="row">
-            <div className="col-md-4" />
+          wrapByNColumns(
             <ul className="col-md list-group">
               {this.state.events.map((event, index) => <ListEntry key={index} event={event} />)}
-            </ul>
-            <div className="col-md-4" />
-          </div>
+            </ul>,
+            4,
+          )
         }
       </div>
     );
