@@ -1,4 +1,4 @@
-# smarkets-frontend
+# smarkets-frontend-screen
 Frontend app using Smarkets' API.
 
 ## Instructions
